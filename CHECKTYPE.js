@@ -23,8 +23,8 @@ function check_datatype(params) {
     //Condition to check if parameter is Array
     else if (params && typeof params === 'object' && typeof params[0] != 'object' && params.constructor === Array) {
         console.log('Type : Array')
-        params.map((x, i) => {
-            console.log(x);
+        params.map((value) => {
+            console.log(value);
         })
     }
     //Condition to check if parameter is object
@@ -32,15 +32,15 @@ function check_datatype(params) {
         console.log('Type : Object')
         let key = Object.keys(params);
         let val = Object.values(params);
-        key.map((x, i) => {
-            console.log(x + ":" + val[i]);
+        key.map((value, index) => {
+            console.log(value + ":" + val[index]);
         })
     }
     //Condition to check if parameter is Array of objects
     else if (params && typeof params === 'object' && typeof params[0] === 'object' && params.constructor === Array) {
         console.log('Type : Array of Object')
-        params.map((x, i) => {
-            console.log(x);
+        params.map((value) => {
+            console.log(value);
         })
 
     }
